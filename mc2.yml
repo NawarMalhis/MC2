@@ -1,0 +1,12 @@
+name: mc2_cpu
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - pip:
+    - biopython
