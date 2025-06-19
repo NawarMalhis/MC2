@@ -21,7 +21,7 @@ git clone https://github.com/NawarMalhis/MC2.git
 git clone https://github.com/NawarMalhis/AFF.git
 # Change directory:	
 cd MC2
-# Update the path to the AFF (annotated fasta format) folder in ham_param.py
+# Update the path to the AFF (annotated fasta format) folder in param.py
 aff_path = '/xxx/xxx/AFF/'
 # Create an mc2 environment:
 conda env create -f mc2.yml
