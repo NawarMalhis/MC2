@@ -14,14 +14,22 @@ RAM: 8 GB minimum, 16 GB recommended.
 CPU: Multicore with 4+ cores recommended.
 
 ## To install:
-Create an mc2 environment:
 ```bash
+# Clone MC2
+git clone https://github.com/NawarMalhis/MC2.git
+# Clone the "annotated fasta format" library:	
+git clone https://github.com/NawarMalhis/AFF.git
+# Change directory:	
+cd MC2
+# Update the path to the AFF (annotated fasta format) folder in ham_param.py
+aff_path = '/xxx/xxx/AFF/'
+# Create an mc2 environment:
 conda env create -f mc2.yml
 ```
 
 ## To run:
-Activate the mc2 environment:
 ```bash
+# Activate the mc2 environment:
 conda activate mc2_cpu
 ```
 Input sequences are in the input.fasta, output will be in ./output/
