@@ -1,5 +1,6 @@
 from param import *
 from Bayes import bayes_evidence, merge_mean
+from models import C3F2
 import numpy as np
 import torch
 import os
@@ -10,8 +11,10 @@ def load_models(models_path, priors_file, dev='cpu'):
     mdl_list = []
     priors_list = []
     for cv in range(4):
-        mdl_list.append(torch.load(f'{models_path}MM{cv}.cnn').to(dev))
-        # print(mdl_list[-1])
+        model_state_dict = torch.load(f'{models_path}MM{cv}.cnn', weights_only=True)
+        mdl = C3F2()
+        mdl.load_state_dict(model_state_dict)
+        mdl_list.append(mdl.to(dev))
     with open(priors_file, 'r') as fin:
         for line in fin:
             if len(line) < 3:

@@ -11,7 +11,6 @@ from datetime import datetime
 if __name__ == '__main__':
     create_out_dir()
     mdl_list, priors_list = load_models(models_path=f'Models/', priors_file='Stuff/priors.tsv')
-
     fasta = aff_load_fasta(input_fasta)
     p_matrix = read_p_matrix_dict1()
     c_dict = read_f5_dict()
