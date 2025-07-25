@@ -9,4 +9,5 @@ dependencies:
   - torchaudio
   - cpuonly
   - pip:
+    - crc64iso
     - biopython
